@@ -1,3 +1,14 @@
+:root {
+    /* color */
+    --color-accent: #A66B43;
+
+    /* size */
+    --size-max-width: 120rem;
+
+    /* Divider */
+    --divider-single-wave: url('data:image/svg+xml;utf8,<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" > <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill" ></path> </svg>')
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +25,6 @@ a {
 }
 
 html {
-    scroll-behavior: smooth;
     font-size: 62.5%;
 }
 
@@ -49,7 +59,7 @@ h4 {
     width: 5px;
     max-height: 3rem;
     height: 100%;
-    background-color: #A66B43;    
+    background-color: var(--color-accent);    
 }
 
 .header {
@@ -65,7 +75,7 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 120rem;
+    max-width: var(--size-max-width);
     margin: 0 auto;
     padding: 1rem 2rem;
 }
@@ -97,7 +107,7 @@ h4 {
 }
 
 .hero__inner {
-    max-width: 120rem;
+    max-width: var(--size-max-width);
     margin: 0 auto;
     padding: 0 2rem;
     height: 100%;
@@ -129,7 +139,7 @@ h4 {
     display: block;  
     width: 18.5rem;  
     padding: 1.2rem 2.8rem;
-    background-color: #A66B43;
+    background-color: var(--color-accent);
     border-radius: 3rem;
     color: #fff;
     text-align: center;
@@ -140,9 +150,9 @@ h4 {
     display: flex;
     flex-direction: column;
     gap: 6rem;
-    max-width: 120rem;
+    max-width: var(--size-max-width);
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 2rem 10rem;
 }
 
 .profile {
@@ -177,7 +187,7 @@ h4 {
 
 .profile__tags li {
     padding: .6rem 1.2rem;
-    background-color: #A66B43;
+    background-color: var(--color-accent);
     border-radius: 2rem;
     color: #fff;
 }
@@ -224,7 +234,7 @@ h4 {
     top: 1rem;
     left: 1rem;
     padding: .5rem 1rem;
-    background-color: #A66B43;
+    background-color: var(--color-accent);
     border-radius: 2rem;
     color: #fff;
     font-weight: bold;
@@ -242,7 +252,7 @@ h4 {
 }
 
 .post__info h3 {
-    color: #A66B43;
+    color: var(--color-accent);
     font-size: 2rem;
 }
 
@@ -267,9 +277,9 @@ h4 {
     width: 7.2rem;
     height: 4.3rem;
     padding: .4rem 1rem;
-    border: .2rem solid #A66B43;
+    border: .2rem solid var(--color-accent);
     text-align: center;
-    color: #A66B43;
+    color: var(--color-accent);
     font-weight: bold;
 }
 
@@ -312,7 +322,7 @@ h4 {
 }
 
 .archive__list li a span i {
-    color: #A66B43;
+    color: var(--color-accent);
     font-size: 3rem;
 }
 
@@ -369,29 +379,43 @@ h4 {
     font-size: 4rem;
 }
 
-
 .footer {
-    margin-top: 20rem;
+    overflow: hidden;
+    position: relative;
+    padding-top: 10rem;
     background-color: #EDE1D3;
+}
+
+.footer::after {
+    content:'';
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 1.3px);
+    height: 100px;
+    line-height: 0;
+    background-color: #F3EEE7;
+    mask: var(--divider-single-wave);
 }
 
 .footer__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 120rem;
+    max-width: var(--size-max-width);
     margin: 0 auto;   
     padding: 4rem 2rem;
 }
 
 .footer p:nth-child(1) {
-    color: #A66B43;
+    color: var(--color-accent);
     font-size: 3rem;
     font-weight: bold;
 }
 
 .footer p:nth-child(1) i {
-    color: #A66B43;
+    color: var(--color-accent);
     font-size: 3rem;
 }
 
@@ -399,35 +423,23 @@ h4 {
     font-size: 1.8rem;
 }
 
-.topBtn {
+.topBtn a {
+    opacity: 0;
     align-content: center;
     position: fixed;
-    right: 3rem;
-    bottom: 5rem;
+    right: 2.4rem;
+    bottom: 2.4rem;
     width: 8rem;
     height: 8rem;
+    transform: translateY(-20px);
+    transition: all .3s ease-in;
     border-radius: 50%;
-    background-color: #A66B43;
+    background-color: var(--color-accent);
     color: #fff;
     text-align: center;
 }
 
-.custom-shape-divider-top-1794298831 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1794298831 svg {
-    position: relative;
-    display: block;
-    width: calc(120% + 1.3px);
-    height: 150px;
-}
-
-.custom-shape-divider-top-1794298831 .shape-fill {
-    fill: #EDE1D3;
+.topBtn a.active {
+    opacity: 1;
+    transform: translateY(0);
 }
