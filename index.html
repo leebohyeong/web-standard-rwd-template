@@ -18,6 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
     <header class="header">
@@ -191,25 +192,5 @@
     <aside class="topBtn">
       <a href="#">TOP</a>
     </aside>
-
-    <script>
-      const header = document.querySelector(".header");
-      const headerHeight = header.getBoundingClientRect().height;
-      const topBtn = document.querySelector(".topBtn a");
-
-      topBtn.addEventListener("click", (event) => {
-        event.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-
-      window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY;
-
-        topBtn.classList.toggle("active", scrollY > headerHeight);
-      });
-    </script>
   </body>
 </html>
