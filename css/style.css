@@ -56,7 +56,7 @@ h4 {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 5px;
+    width: .5rem;
     max-height: 3rem;
     height: 100%;
     background-color: var(--color-accent);    
@@ -69,6 +69,12 @@ h4 {
     z-index: 10;
     width: 100%;
     background-color: rgba(0,0,0, .4);
+    backdrop-filter: blur(3px);
+    transition: all .3s;
+}
+
+.header.header--active {
+    background-color: rgba(166, 107, 67, .8);
 }
 
 .header__inner {
@@ -78,6 +84,11 @@ h4 {
     max-width: var(--size-max-width);
     margin: 0 auto;
     padding: 1rem 2rem;
+    transition: all .3s;
+}
+
+.header.header--active .header__inner {
+    padding: .5rem 2rem;
 }
 
 .header__logo a {
@@ -95,15 +106,45 @@ h4 {
 
 .header__menu a {
     display: block;
+    position: relative;
     padding: 1.5rem 2rem;
     color: #fff;
 }
 
+.header__menu a::after {
+    content:'';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    max-width: 100px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: all .3s;
+}
+
+.header.header--active .header__menu a::after {
+    background-color: #382A22;
+}
+
+.header__menu a:hover {
+    color: var(--color-accent);
+}
+
+.header.header--active .header__menu a:hover {
+    color: inherit;
+}
+
+.header__menu a:hover::after {
+    width: 100%;
+}
+
 .hero {
     max-width: 192rem;
-    height: 51rem;
+    height: 80vh;
     margin: 0 auto;
-    background: url('../images/main-banner.jpg') no-repeat center/cover;
+    background: url('../images/main-banner_1.jpg') no-repeat center/cover;
 }
 
 .hero__inner {
@@ -149,14 +190,14 @@ h4 {
 .main__inner {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 8rem;
     max-width: var(--size-max-width);
     margin: 0 auto;
-    padding: 0 2rem 10rem;
+    padding: 0 2rem 20rem;
 }
 
 .profile {
-    margin-top: -6rem;
+    margin-top: -9.25rem;
     background-color: #EDE1D3;
     border-radius: 1.6rem;
     box-shadow: .4rem .4rem 1rem rgba(166, 107, 67, .25);
@@ -195,7 +236,7 @@ h4 {
 .post__inner {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .post__list {
@@ -281,10 +322,17 @@ h4 {
     text-align: center;
     color: var(--color-accent);
     font-weight: bold;
+    transition: all .3s;
+}
+
+.post__info a:hover {
+    background-color: var(--color-accent);
+    color: #fff;
 }
 
 .archive__list-wrap {
-    display: flex;
+    display: grid;
+    grid-template-columns: 746fr 394fr;
     gap: 2rem;
 }
 
@@ -296,18 +344,22 @@ h4 {
     width: 100%;
 }
 
-.archive__list1 li {
-    padding: 2rem;
-    border-radius: 2rem;
-    background-color: #FFFCF7;
-}
-
 .archive__list1 li a {
     display: flex;
     align-items: center;
     gap: 2rem;
     width: 100%;
     height: 100%;
+    padding: 2rem;
+    background-color: #FFFCF7;
+    border-radius: 2rem;
+    transition: all .3s;
+}
+
+.archive__list1 li a:hover {
+    background-color: var(--color-accent);
+    box-shadow: .4rem .4rem 1rem rgba(166, 107, 67, 0.6);
+    color: #fff;
 }
 
 .archive__list li a span {
@@ -330,27 +382,24 @@ h4 {
     padding-bottom: .5rem;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .archive__list li a p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 } 
 
 .archive__list1 li:nth-of-type(1),
 .archive__list1 li:nth-of-type(4) {
-    flex:calc(100% - 32rem) 1 0;
-    aspect-ratio: 426/160;
+    /* flex:calc(100% - 32rem) 1 0; */
+    flex: 426 1 0;
+    aspect-ratio: 426/130;
 }
 
 .archive__list1 li:nth-of-type(2),
 .archive__list1 li:nth-of-type(3) {
     flex: 1 1 30rem;
-}
-
-
-.archive__list2 {
-    flex: 1;
+    max-width: 300px;
 }
 
 .archive__list2 a {
@@ -367,12 +416,18 @@ h4 {
     text-align: center;
 }
 
+.archive__list2 a:hover {
+    background: rgba(166, 107, 67, .8) url('../images/archive_img.jpg') no-repeat center/cover;
+}
+
 .archive__list2 a h3 {
-    font-size: 3rem;
+    padding-bottom: 1rem;
+    font-size: 2.6rem;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 .archive__list2 a p {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 
 .archive__list2 a i {
