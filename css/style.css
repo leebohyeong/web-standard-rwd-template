@@ -24,6 +24,12 @@ a {
   text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -60,6 +66,8 @@ h4 {
   height: 100%;
   background-color: var(--color-accent);
 }
+
+/* hedaer */
 
 .header {
   position: fixed;
@@ -115,9 +123,9 @@ h4 {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  max-width: 100px;
+  max-width: 10rem;
   width: 0;
-  height: 2px;
+  height: 0.2rem;
   background-color: var(--color-accent);
   transition: all 0.3s;
 }
@@ -138,12 +146,13 @@ h4 {
   width: 100%;
 }
 
+/* hero */
 .hero {
   max-width: 192rem;
-  max-height: 800px;
+  max-height: 80rem;
   height: 80vh;
   margin: 0 auto;
-  background: url("../images/main-banner_2.jpg") no-repeat center/cover;
+  background: url("../images/main-banner_3.jpg") no-repeat center/cover;
 }
 
 .hero__inner {
@@ -186,6 +195,7 @@ h4 {
   font-weight: bold;
 }
 
+/* main */
 .main {
   background-color: #f3eee7;
 }
@@ -333,6 +343,121 @@ h4 {
   color: #fff;
 }
 
+/* taste */
+.taste .section-title {
+    display: flex;
+    justify-content: center;
+}
+
+.taste .section-title::before {
+    display: none;
+}
+
+.taste__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.taste__tab {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 60rem;
+    width: 100%;
+}
+
+.taste__tab button {
+    padding: 1rem;
+    background-color: #FFFCF7;
+    border-radius: 4.8rem;
+    box-shadow: 0.4rem 0.4rem 1rem rgba(166, 107, 67, 0.1);
+}
+
+.taste__tab button.active {
+    background-color: var(--color-accent);
+    color: #fff;
+    font-weight: bold;
+}
+
+.taste__list {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    grid-template-rows: 30rem;
+    transition: grid-template-columns .3s ease;
+}
+
+.taste__list.coffee {
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.taste__list.mood {
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.taste__item {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.taste__item::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(166, 107, 67, .8);
+}
+
+.taste__item.active::before {
+    display: none;
+}
+
+.taste__item::after {
+    display: none;
+    opacity: 0.4;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(166, 107, 67, 1) 100%);
+}
+
+.taste__item[data-content="coffee"] {
+    background-image: url('../images/taste_coffee.jpg');
+    background-position: right center;
+}
+
+.taste__item[data-content="dessert"] {
+    background-image: url('../images/taste_dessert.jpg');
+}
+
+.taste__item[data-content="mood"] {
+    background-image: url('../images/taste_mood.jpg');
+}
+
+.taste__item-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 10px;
+    z-index: 2;
+    color: #fff;
+    font-size: 30px;
+    font-family: "Do Hyeon", sans-serif;
+}
+
+
+/* archive */
 .archive__list-wrap {
   display: grid;
   grid-template-columns: 746fr 394fr;
@@ -402,7 +527,7 @@ h4 {
 .archive__list1 li:nth-of-type(2),
 .archive__list1 li:nth-of-type(3) {
   flex: 1 1 30rem;
-  max-width: 300px;
+  max-width: 30rem;
 }
 
 .archive__list2 a {
@@ -438,6 +563,7 @@ h4 {
   font-size: 4rem;
 }
 
+/* footer */
 .footer {
   overflow: hidden;
   position: relative;
@@ -452,7 +578,7 @@ h4 {
   top: 0;
   left: 0;
   width: calc(100% + 1.3px);
-  height: 100px;
+  height: 10rem;
   line-height: 0;
   background-color: #f3eee7;
   mask: var(--divider-single-wave);
@@ -482,6 +608,7 @@ h4 {
   font-size: 1.8rem;
 }
 
+/* arrow up */
 .topBtn a {
   opacity: 0;
   align-content: center;
@@ -490,7 +617,7 @@ h4 {
   bottom: 2.4rem;
   width: 8rem;
   height: 8rem;
-  transform: translateY(-20px);
+  transform: translateY(-2rem);
   transition: all 0.3s ease-in;
   border-radius: 50%;
   background-color: var(--color-accent);

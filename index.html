@@ -52,7 +52,7 @@
     </section>
     <main class="main">
       <div class="main__inner">
-        <section id="profile" class="profile">
+        <section class="profile">
           <div class="profile__inner">
             <div class="profile__box">
               <p class="profile__img">
@@ -121,6 +121,29 @@
                 <a href="#">더 읽기</a>
               </div>
             </article>
+          </div>
+        </section>
+        <section id="taste" class="taste">
+          <h2 class="section-title">나의 카페 취향</h2>
+          <div class="taste__inner">
+            <div class="taste__tab">
+              <button type="button" data-tab="coffee">커피</button>
+              <button type="button" class="active" data-tab="dessert">
+                디저트
+              </button>
+              <button type="button" data-tab="mood">분위기</button>
+            </div>
+            <div class="taste__list">
+              <article class="taste__item" data-content="coffee">
+                <p class="taste__item-title">커피</p>
+              </article>
+              <article class="taste__item active" data-content="dessert">
+                <p class="taste__item-title">디저트</p>
+              </article>
+              <article class="taste__item" data-content="mood">
+                <p class="taste__item-title">분위기</p>
+              </article>
+            </div>
           </div>
         </section>
         <section id="archive" class="archive">
