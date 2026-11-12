@@ -28,9 +28,9 @@
         </h1>
         <nav>
           <ul class="header__menu">
-            <li><a href="#">카페 기록</a></li>
-            <li><a href="#">취향 노트</a></li>
-            <li><a href="#">아카이브</a></li>
+            <li><a href="#post">카페 기록</a></li>
+            <li><a href="#taste">취향 노트</a></li>
+            <li><a href="#archive">아카이브</a></li>
           </ul>
         </nav>
       </div>
@@ -126,22 +126,70 @@
         <section id="taste" class="taste">
           <h2 class="section-title">나의 카페 취향</h2>
           <div class="taste__inner">
-            <div class="taste__tab">
-              <button type="button" data-tab="coffee">커피</button>
-              <button type="button" class="active" data-tab="dessert">
+            <div class="taste__tabs">
+              <button type="button" class="taste__tab" data-tab="coffee">
+                커피
+              </button>
+              <button
+                type="button"
+                class="taste__tab active"
+                data-tab="dessert"
+              >
                 디저트
               </button>
-              <button type="button" data-tab="mood">분위기</button>
+              <button type="button" class="taste__tab" data-tab="mood">
+                분위기
+              </button>
             </div>
             <div class="taste__list">
-              <article class="taste__item" data-content="coffee">
-                <p class="taste__item-title">커피</p>
+              <article class="taste__item" data-item="coffee">
+                <span class="taste__label">커피</span>
+                <div class="taste__content">
+                  <div class="taste__text">
+                    <h3 class="taste__title">고소하고 부드러운 한 잔</h3>
+                    <p class="taste__description">
+                      진한 에스프레소와 부드러운 우유가 어우러진, 매일 마셔도
+                      질리지 않는 커피를 좋아합니다.
+                    </p>
+                  </div>
+                  <ul class="taste__tags">
+                    <li>#카페라떼</li>
+                    <li>#커피한잔</li>
+                  </ul>
+                </div>
               </article>
-              <article class="taste__item active" data-content="dessert">
-                <p class="taste__item-title">디저트</p>
+              <article class="taste__item active" data-item="dessert">
+                <span class="taste__label">디저트</span>
+                <div class="taste__content">
+                  <div class="taste__text">
+                    <h3 class="taste__title">달콤함으로 채우는 작은 여유</h3>
+                    <p class="taste__description">
+                      바삭한 크루아상부터 부드러운 케이크까지, 커피와 함께
+                      즐기는 달콤한 디저트를 좋아합니다.
+                    </p>
+                  </div>
+                  <ul class="taste__tags">
+                    <li>#크루아상</li>
+                    <li>#케이크</li>
+                    <li>#디저트타임</li>
+                  </ul>
+                </div>
               </article>
-              <article class="taste__item" data-content="mood">
-                <p class="taste__item-title">분위기</p>
+              <article class="taste__item" data-item="mood">
+                <span class="taste__label">분위기</span>
+                <div class="taste__content">
+                  <div class="taste__text">
+                    <h3 class="taste__title">햇살이 머무는 따뜻한 공간</h3>
+                    <p class="taste__description">
+                      은은한 햇살과 우드톤 인테리어, 잔잔한 음악이 어우러지는
+                      편안하고 아늑한 카페를 선호합니다.
+                    </p>
+                  </div>
+                  <ul class="taste__tags">
+                    <li>#감성카페</li>
+                    <li>#아늑한공간</li>
+                  </ul>
+                </div>
               </article>
             </div>
           </div>

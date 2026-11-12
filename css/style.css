@@ -25,9 +25,9 @@ a {
 }
 
 button {
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 html {
@@ -259,6 +259,9 @@ h4 {
   padding: 2rem;
   background-color: #fffcf7;
   border-radius: 1.6rem;
+}
+
+.post__list:hover {
   box-shadow: 0.4rem 0.4rem 1rem rgba(166, 107, 67, 0.1);
 }
 
@@ -345,117 +348,196 @@ h4 {
 
 /* taste */
 .taste .section-title {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .taste .section-title::before {
-    display: none;
+  display: none;
 }
 
 .taste__inner {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-}
-
-.taste__tab {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 60rem;
-    width: 100%;
-}
-
-.taste__tab button {
-    padding: 1rem;
-    background-color: #FFFCF7;
-    border-radius: 4.8rem;
-    box-shadow: 0.4rem 0.4rem 1rem rgba(166, 107, 67, 0.1);
-}
-
-.taste__tab button.active {
-    background-color: var(--color-accent);
-    color: #fff;
-    font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 
 .taste__list {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 2rem;
-    width: 100%;
-    grid-template-rows: 30rem;
-    transition: grid-template-columns .3s ease;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  grid-template-rows: 30rem;
+  transition: grid-template-columns 0.3s ease;
 }
 
 .taste__list.coffee {
-    grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
 }
 
 .taste__list.mood {
-    grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.taste__tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 60rem;
+  width: 100%;
+}
+
+.taste__tab {
+  padding: 1rem;
+  background-color: #fffcf7;
+  border-radius: 4.8rem;
+  box-shadow: 0.4rem 0.4rem 1rem rgba(166, 107, 67, 0.1);
+  transition: all 0.3s;
+  font-size: 1.6rem;
+}
+
+.taste__tab.active {
+  background-color: var(--color-accent);
+  color: #fff;
+  font-weight: bold;
 }
 
 .taste__item {
-    position: relative;
-    background-position: center;
-    background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+}
+
+.taste__item[data-item="coffee"] {
+  background-image: url("../images/taste_coffee.jpg");
+  background-position: right center;
+}
+
+.taste__item[data-item="dessert"] {
+  background-image: url("../images/taste_dessert.jpg");
+}
+
+.taste__item[data-item="mood"] {
+  background-image: url("../images/taste_mood.jpg");
 }
 
 .taste__item::before {
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: rgba(166, 107, 67, .8);
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform: translateY(-50%);
+  background-color: rgba(166, 107, 67, 0.8);
+  transition: all 0.3s ease;
 }
 
-.taste__item.active::before {
-    display: none;
+.taste__label {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 1rem;
+  z-index: 2;
+  color: #fff;
+  font-size: 2.8rem;
+  font-family: "Do Hyeon", sans-serif;
+  transition: all 0.3s;
 }
 
-.taste__item::after {
-    display: none;
-    opacity: 0.4;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(166, 107, 67, 1) 100%);
+.taste__label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 4rem;
+  height: 0.4rem;
+  transform: translateX(-50%);
+  background-color: #fff;
 }
 
-.taste__item[data-content="coffee"] {
-    background-image: url('../images/taste_coffee.jpg');
-    background-position: right center;
+.taste__item:hover::before,
+.taste__item:hover .taste__label {
+  opacity: 1;
 }
 
-.taste__item[data-content="dessert"] {
-    background-image: url('../images/taste_dessert.jpg');
+.taste__item.active::before,
+.taste__item.active:hover::before,
+.taste__item.active .taste__label,
+.taste__item.active:hover .taste__label {
+  opacity: 0;
 }
 
-.taste__item[data-content="mood"] {
-    background-image: url('../images/taste_mood.jpg');
+.taste__content {
+  opacity: 0;
+  padding: 20px;
 }
 
-.taste__item-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-bottom: 10px;
-    z-index: 2;
-    color: #fff;
-    font-size: 30px;
-    font-family: "Do Hyeon", sans-serif;
+.taste__content::before {
+  /* opacity: 0; */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(166, 107, 67, 1) 100%
+  );
 }
 
+.taste__item.active .taste__content {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  color: #fff;
+  transition: all 0.6s ease;
+}
+
+.taste__item.active .taste__content::before {
+  opacity: 0.5;
+  width: 100%;
+}
+
+.taste__title {
+  padding-bottom: 2rem;
+  font-size: 2.8rem;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.taste__description {
+  word-break: keep-all;
+  max-width: 50%;
+}
+
+.taste__tags {
+  display: flex;
+  gap: 1rem;
+}
+
+.taste__tags li {
+  padding: 0.5rem;
+  background-color: #ede1d3;
+  border-radius: 2rem;
+  color: #382a22;
+  font-size: 1.3rem;
+}
 
 /* archive */
 .archive__list-wrap {
