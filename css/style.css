@@ -121,6 +121,7 @@ h4 {
 
 /* hero */
 .hero {
+  position: relative;
   max-width: 192rem;
   max-height: 80rem;
   height: 80vh;
