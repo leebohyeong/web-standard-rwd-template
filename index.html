@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ko_KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Blog</title>
+    <meta
+      name="description"
+      content="cafe blog  &lt;좋은 카페를 발견하고, 맛있는 순간을 기록합니다.&gt;"
+    />
+    <meta
+      name="keywords"
+      content="카페로그, 카페기록, 카페투어, 추천카페, 커피, 카페 디저트, 카페 분위기"
+    />
+    <meta name="author" content="BoHyeong Lee" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon.png"
+      type="image/x-icon"
+      sizes="32x32"
+    />
+    <!-- OG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cafe Blog" />
+    <meta
+      property="og:description"
+      content="Cafe Blog | 좋은 카페를 발견하고, 맛있는 순간을 기록합니다."
+    />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ko_KR" />
+
+    <!-- 모바일 주소창 색 -->
+    <meta name="theme-color" content="#a66b43" />
+
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="/"><i class="fa-solid fa-mug-hot"></i>CAFE LOG </a>
+        </h1>
+        <button
+          type="button"
+          class="menu-btn"
+          aria-label="메뉴 열기"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="main-nav">
+          <ul class="header__menu">
+            <li><a href="#post">카페 기록</a></li>
+            <li><a href="#taste">취향 노트</a></li>
+            <li><a href="#archive">아카이브</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <p class="hero__subTitle">CAFE LOG</p>
+          <h2 class="hero__title">
+            커피 한 잔에 담긴 <br />
+            작은 일상
+          </h2>
+          <p class="hero__desc">
+            좋은 카페를 발견하고, 맛있는 순간을 기록합니다.
+          </p>
+          <a href="#" class="hero__btn">카페 기록 보러 가기</a>
+        </div>
+      </div>
+    </section>
+    <main class="main">
+      <div class="main__inner">
+        <section class="profile">
+          <div class="profile__inner">
+            <div class="profile__box">
+              <p class="profile__img">
+                <img src="./images/profile_img.svg" alt="profile img" />
+              </p>
+              <div class="profile__intro">
+                <h3>보형의 카페로그</h3>
+                <p>
+                  좋은 카페와 맛있는 커피를 사랑하는 사람, <br />
+                  오늘도 카페를 찾아 떠납니다.
+                </p>
+              </div>
+            </div>
+            <ul class="profile__tags">
+              <li>#카페 투어</li>
+              <li>#카페 리뷰</li>
+              <li>#일상 기록</li>
+            </ul>
+          </div>
+        </section>
+        <section id="post" class="post">
+          <h2 class="section-title">카페 기록</h2>
+          <div class="post__inner">
+            <article class="post__list">
+              <div class="post__thumb">
+                <img src="./images/post_img_1.jpg" alt="라온숨" />
+                <span class="post__date">11.01</span>
+              </div>
+              <div class="post__info">
+                <h3>라온숨</h3>
+                <h4>북한강 바라보며 힐링하는 카페 공간</h4>
+                <p>
+                  남양주카페 라온숨은 순우리말 라온(즐겁다)+숨(숨쉬다)을 더해
+                  즐겁게 숨 쉴 수 있는 공간을 의미한 카페
+                </p>
+                <a href="#">더 읽기</a>
+              </div>
+            </article>
+            <article class="post__list">
+              <div class="post__thumb">
+                <img src="./images/post_img_2.jpg" alt="브리끄" />
+                <span class="post__date">11.01</span>
+              </div>
+              <div class="post__info">
+                <h3>브리끄</h3>
+                <h4>넓은 잔디밭과 북한강 뷰를 볼 수 있는 베이커리</h4>
+                <p>
+                  남양주에 위치한 대형 카페로 주차장이 넓고 직원들도 많아
+                  편리하며, 특히 탁 트인 뷰와 편안한 소파 좌석이 매력적
+                </p>
+                <a href="#">더 읽기</a>
+              </div>
+            </article>
+            <article class="post__list">
+              <div class="post__thumb">
+                <img src="./images/post_img_3.jpg" alt="테이블스라운지" />
+                <span class="post__date">11.01</span>
+              </div>
+              <div class="post__info">
+                <h3>테이블스라운지</h3>
+                <h4>북한강을 바라보며 즐기는 호텔식 브런치</h4>
+                <p>
+                  남양주카페의 새로운 기준, 북한강 리버뷰와 함께하는 프리미엄
+                  베이커리, 브런치 다이닝
+                </p>
+                <a href="#">더 읽기</a>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section id="taste" class="taste">
+          <h2 class="section-title">나의 카페 취향</h2>
+          <div class="taste__inner">
+            <div class="taste__tabs">
+              <button type="button" class="taste__tab" data-tab="coffee">
+                커피
+              </button>
+              <button
+                type="button"
+                class="taste__tab active"
+                data-tab="dessert"
+              >
+                디저트
+              </button>
+              <button type="button" class="taste__tab" data-tab="mood">
+                분위기
+              </button>
+            </div>
+            <div class="taste__list">
+              <article class="taste__item" data-item="coffee">
+                <span class="taste__label">커피</span>
+                <div class="taste__content">
+                  <div class="taste__text">
+                    <h3 class="taste__title">고소하고 부드러운 한 잔</h3>
+                    <p class="taste__description">
+                      진한 에스프레소와 부드러운 우유가 어우러진, 매일 마셔도
+                      질리지 않는 커피를 좋아합니다.
+                    </p>
+                  </div>
+                  <ul class="taste__tags">
+                    <li>#카페라떼</li>
+                    <li>#커피한잔</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="taste__item active" data-item="dessert">
+                <span class="taste__label">디저트</span>
+                <div class="taste__content">
+                  <div class="taste__text">
+                    <h3 class="taste__title">달콤함으로 채우는 작은 여유</h3>
+                    <p class="taste__description">
+                      바삭한 크루아상부터 부드러운 케이크까지, 커피와 함께
+                      즐기는 달콤한 디저트를 좋아합니다.
+                    </p>
+                  </div>
+                  <ul class="taste__tags">
+                    <li>#크루아상</li>
+                    <li>#케이크</li>
+                    <li>#디저트타임</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="taste__item" data-item="mood">
+                <span class="taste__label">분위기</span>
+                <div class="taste__content">
+                  <div class="taste__text">
+                    <h3 class="taste__title">햇살이 머무는 따뜻한 공간</h3>
+                    <p class="taste__description">
+                      은은한 햇살과 우드톤 인테리어, 잔잔한 음악이 어우러지는
+                      편안하고 아늑한 카페를 선호합니다.
+                    </p>
+                  </div>
+                  <ul class="taste__tags">
+                    <li>#감성카페</li>
+                    <li>#아늑한공간</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section id="archive" class="archive">
+          <h2 class="section-title">카페 아카이브</h2>
+          <div class="archive__list-wrap">
+            <ul class="archive__list archive__list1">
+              <li>
+                <a href="#">
+                  <span><i class="fa-solid fa-cake-candles"></i></span>
+                  <div>
+                    <h3>디저트</h3>
+                    <p>달콤한 디저트를 소개해요</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span><i class="fa-solid fa-map-location"></i></span>
+                  <div>
+                    <h3>추천 카페</h3>
+                    <p>꼭 가봐야 할 카페들!</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span><i class="fa-solid fa-mug-hot"></i></span>
+                  <div>
+                    <h3>커피</h3>
+                    <p>다양한 커피를 즐겨요</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span><i class="fa-solid fa-pen"></i></span>
+                  <div>
+                    <h3>리뷰</h3>
+                    <p>직접 다녀온 솔직한 후기</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="archive__list archive__list2">
+              <a href="#">
+                <i class="fa-solid fa-mug-hot"></i>
+                <div>
+                  <h3>전체 카페 기록</h3>
+                  <p>
+                    지금까지 다녀온 모든 <br />
+                    카페를 만나보세요!
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <p>
+          <i class="fa-solid fa-mug-hot"></i>
+          CAFE LOG
+        </p>
+        <p>© 2026 CAFE LOG. ALL RIGHTS RESERVED</p>
+      </div>
+    </footer>
+    <aside class="topBtn">
+      <a href="#">TOP</a>
+    </aside>
+  </body>
+</html>
