@@ -1,6 +1,8 @@
 const header = document.querySelector(".header");
 const headerHeight = header.getBoundingClientRect().height;
 const topBtn = document.querySelector(".topBtn a");
+const menus = document.querySelectorAll('.header__menu a');
+const menuBtn = document.querySelector('.menu-btn');
 
 topBtn.addEventListener("click", (event) => {
     event.preventDefault();
@@ -10,48 +12,44 @@ topBtn.addEventListener("click", (event) => {
     });
 });
 
+
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
-    header.classList.toggle('header--active', scrollY > headerHeight);
     topBtn.classList.toggle("active", scrollY > headerHeight);
 });
 
+
 // menu-btn
-{
-    const menus = document.querySelectorAll('.header__menu a');
-    const menuBtn = document.querySelector('.menu-btn');
+const toggleMenu = (isOpen) => {
+    menuBtn.setAttribute('aria-expanded', isOpen);
+    menuBtn.setAttribute('aria-label', isOpen ? '메뉴 열기' : '메뉴 닫기');
+    header.classList.toggle('header--active', isOpen);
+};
 
+menuBtn.addEventListener('click', () => {
+    const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
 
-    const toggleMenu = (isOpen) => {
-        menuBtn.setAttribute('aria-expanded', isOpen);
-        menuBtn.setAttribute('aria-label', isOpen ? '메뉴 열기' : '메뉴 닫기');
-    };
+    toggleMenu(!isOpen);
+});
 
-    menuBtn.addEventListener('click', () => {
-         const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+menus.forEach(menu => {
+    menu.addEventListener('click', (event) => {
+        event.preventDefault();
+        
+        const href = menu.getAttribute('href');
+        const target = document.querySelector(href);
+        const top = target.getBoundingClientRect().top + scrollY;
 
-         console.log(isOpen)
-         toggleMenu(!isOpen);
-    });
+        window.scrollTo({
+            top: top - headerHeight,
+            behavior: 'smooth'
+        });
 
-    menus.forEach(menu => {
-        menu.addEventListener('click', (event) => {
-            event.preventDefault();
-            
-            const href = menu.getAttribute('href');
-            const target = document.querySelector(href);
-            const top = target.getBoundingClientRect().top + scrollY
+        toggleMenu(false);
+    })
+});
 
-            window.scrollTo({
-                top: top - headerHeight - headerHeight/2,
-                behavior: 'smooth'
-            });
-
-            toggleMenu(false);
-        })
-    });
-}
 
 
 // taste
