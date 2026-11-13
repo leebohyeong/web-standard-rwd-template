@@ -1,14 +1,46 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko_KR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafe Blog</title>
+    <meta
+      name="description"
+      content="cafe blog  &lt;좋은 카페를 발견하고, 맛있는 순간을 기록합니다.&gt;"
+    />
+    <meta
+      name="keywords"
+      content="카페로그, 카페기록, 카페투어, 추천카페, 커피, 카페 디저트, 카페 분위기"
+    />
+    <meta name="author" content="BoHyeong Lee" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon.png"
+      type="image/x-icon"
+      sizes="32x32"
+    />
+    <!-- OG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cafe Blog" />
+    <meta
+      property="og:description"
+      content="Cafe Blog | 좋은 카페를 발견하고, 맛있는 순간을 기록합니다."
+    />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ko_KR" />
+
+    <!-- 모바일 주소창 색 -->
+    <meta name="theme-color" content="#a66b43" />
+
     <!-- font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -18,6 +50,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
     <script defer src="./js/main.js"></script>
   </head>
   <body>
@@ -26,7 +59,18 @@
         <h1 class="header__logo">
           <a href="/"><i class="fa-solid fa-mug-hot"></i>CAFE LOG </a>
         </h1>
-        <nav>
+        <button
+          type="button"
+          class="menu-btn"
+          aria-label="메뉴 열기"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="main-nav">
           <ul class="header__menu">
             <li><a href="#post">카페 기록</a></li>
             <li><a href="#taste">취향 노트</a></li>
