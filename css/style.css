@@ -206,6 +206,20 @@ h4 {
   gap: 2.4rem;
 }
 
+.profile__img {
+  overflow: hidden;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 2rem;
+}
+
+.profile__img img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
 .profile__intro h3 {
   margin-bottom: 0.6rem;
   font-size: 2.4rem;
@@ -221,6 +235,7 @@ h4 {
   background-color: var(--color-accent);
   border-radius: 2rem;
   color: #fff;
+  font-size: 1.4rem;
 }
 
 .post__inner {
