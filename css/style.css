@@ -140,11 +140,12 @@ h1,
 }
 
 .hero__content3 {
-  background: url("../images/main-banner_3.jpg") no-repeat center/cover;
+  background: url("../images/main-banner_3.jpg") no-repeat center bottom 40% /
+    cover;
 }
 
 .hero__content4 {
-  background: url("../images/main-banner_4.jpg") no-repeat center/cover;
+  background: url("../images/main-banner_4.jpg") no-repeat center bottom/cover;
 }
 
 .hero__inner {
