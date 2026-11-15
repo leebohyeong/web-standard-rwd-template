@@ -30,10 +30,6 @@
     font-size: 1.5rem;
   }
 
-  .profile__tags li {
-    font-size: 1.3rem;
-  }
-
   .section-title {
     font-size: 2.4rem;
   }
@@ -102,7 +98,7 @@
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.151) 100%
+      rgba(0, 0, 0, 0.5) 100%
     );
     text-align: center;
   }
@@ -251,7 +247,7 @@
 
   .archive__list li a h3 {
     padding-bottom: 0;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .archive__list li a p {
@@ -303,5 +299,9 @@
     width: 5.5rem;
     height: 5.5rem;
     font-size: 1.4rem;
+  }
+
+  .profile__favorite {
+    display: none;
   }
 }
