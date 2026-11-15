@@ -180,6 +180,11 @@
     text-align: center;
   }
 
+  .profile__img {
+    width: 12rem;
+    height: 12rem;
+  }
+
   .profile__box {
     flex-direction: column;
   }
