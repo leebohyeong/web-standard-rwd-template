@@ -18,6 +18,20 @@
     font-size: 1.4rem;
   }
 
+  .hero-swiper-button-wrap {
+    justify-content: flex-end;
+    bottom: 12rem;
+  }
+
+  .hero-swiper-button {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .hero-swiper-button i {
+    font-size: 2rem;
+  }
+
   .profile__inner {
     padding: 2rem;
   }
@@ -163,7 +177,7 @@
     transform: translateY(-0.8rem) rotate(-45deg);
   }
 
-  .hero::before {
+  .hero__content::before {
     content: "";
     position: absolute;
     inset: 0;

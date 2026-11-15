@@ -57,8 +57,13 @@
       referrerpolicy="no-referrer"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/media.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script defer src="./js/main.js"></script>
   </head>
   <body>
@@ -87,19 +92,88 @@
         </nav>
       </div>
     </header>
-    <section class="hero">
-      <div class="hero__inner">
-        <div class="hero__text">
-          <p class="hero__subTitle">CAFE LOG</p>
-          <h2 class="hero__title">
-            커피 한 잔에 담긴 <br />
-            작은 일상
-          </h2>
-          <p class="hero__desc">
-            좋은 카페를 발견하고, 맛있는 순간을 기록합니다.
-          </p>
-          <a href="#" class="hero__btn">카페 기록 보러 가기</a>
+    <section class="hero hero-swiper swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <secttion class="hero__content hero__content1">
+            <div class="hero__inner">
+              <div class="hero__text">
+                <p class="hero__subTitle">CAFE LOG</p>
+                <h2 class="hero__title">
+                  커피 한 잔에 담긴 <br />
+                  작은 일상
+                </h2>
+                <p class="hero__desc">
+                  좋은 카페를 발견하고, 맛있는 순간을 기록합니다.
+                </p>
+                <a href="#" class="hero__btn">카페 기록 보러 가기</a>
+              </div>
+            </div>
+          </secttion>
         </div>
+        <div class="swiper-slide">
+          <section class="hero__content hero__content2">
+            <div class="hero__inner">
+              <div class="hero__text">
+                <p class="hero__subTitle">COFFEE & DESSERT</p>
+                <h2 class="hero__title">
+                  달콤한 디저트와 <br />향긋한 커피 한 모금
+                </h2>
+                <p class="hero__desc">
+                  좋아하는 메뉴를 맛보고, 그 순간의 즐거움을 남깁니다.
+                </p>
+                <a href="#" class="hero__btn">카페 기록 보러 가기</a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section class="hero__content hero__content3">
+            <div class="hero__inner">
+              <div class="hero__text">
+                <p class="hero__subTitle">CAFE SPACE</p>
+                <h2 class="hero__title">오늘의 취향을 한 잔에 담아</h2>
+                <p class="hero__desc">
+                  좋아하는 커피와 디저트로 하루를 채웁니다.
+                </p>
+                <a href="#" class="hero__btn">카페 기록 보러 가기</a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section class="hero__content hero__content4">
+            <div class="hero__inner">
+              <div class="hero__text">
+                <p class="hero__subTitle">A TASTE OF DAILY LIFE</p>
+                <h2 class="hero__title">
+                  머물고 싶은 공간, <br />
+                  기억하고 싶은 순간
+                </h2>
+                <p class="hero__desc">
+                  분위기 좋은 카페에서 나만의 여유를 찾아봅니다.
+                </p>
+                <a href="#" class="hero__btn">카페 기록 보러 가기</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="hero-swiper-button-wrap">
+        <button
+          type="button"
+          class="hero-swiper-button hero-swiper-button-prev"
+          aria-label="이전 슬라이드"
+        >
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <button
+          type="button"
+          class="hero-swiper-button hero-swiper-button-next"
+          aria-label="다음 슬라이드"
+        >
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
       </div>
     </section>
     <main class="main">

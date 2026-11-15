@@ -12,13 +12,11 @@ topBtn.addEventListener("click", (event) => {
     });
 });
 
-
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
     topBtn.classList.toggle("active", scrollY > headerHeight);
 });
-
 
 // menu-btn
 const toggleMenu = (isOpen) => {
@@ -29,7 +27,6 @@ const toggleMenu = (isOpen) => {
 
 menuBtn.addEventListener('click', () => {
     const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
-
     toggleMenu(!isOpen);
 });
 
@@ -51,10 +48,8 @@ menus.forEach(menu => {
 });
 
 
-
 // taste
 {
-
     const taste = document.querySelector('.taste__inner');
     const list = taste.querySelector(".taste__list");
     const tabs = taste.querySelectorAll(".taste__tab");
@@ -75,9 +70,19 @@ menus.forEach(menu => {
         if(tab) tabEvent(tab.dataset.tab);
         if(item) tabEvent(item.dataset.item);
     });
-
 }
 
-
+const swiper = new Swiper('.hero-swiper', {
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+    loop: true,
+    effect: 'fade',
+    navigation: {
+        nextEl: '.hero-swiper-button-next',
+        prevEl: '.hero-swiper-button-prev',
+    }
+});
 
 
