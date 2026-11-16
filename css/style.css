@@ -90,7 +90,7 @@ h1,
   position: relative;
   max-width: var(--size-max-width);
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   transition: all 0.3s;
 }
 
@@ -122,8 +122,8 @@ h1,
 .hero-swiper {
   position: relative;
   max-width: 192rem;
-  max-height: 80rem;
-  height: 80vh;
+  max-height: 90rem;
+  height: 90vh;
 }
 
 .hero__content {
@@ -188,6 +188,7 @@ h1,
 .hero-swiper-button-wrap {
   display: flex;
   gap: 2rem;
+  justify-content: end;
   position: absolute;
   left: 50%;
   bottom: 12rem;
