@@ -184,6 +184,10 @@
     background: rgba(0, 0, 0, 0.4);
   }
 
+  .hero__title {
+    font-size: 3rem;
+  }
+
   .main__inner {
     padding-bottom: 10rem;
   }
