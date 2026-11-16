@@ -188,6 +188,10 @@
     font-size: 3rem;
   }
 
+  .hero-swiper-button-wrap {
+    gap: 1rem;
+  }
+
   .main__inner {
     padding-bottom: 10rem;
   }
