@@ -375,11 +375,8 @@ h1,
   gap: 2rem;
   padding: 2rem;
   background-color: #fffcf7;
-  border-radius: 1.6rem;
-}
-
-.post__list:hover {
   box-shadow: 0.4rem 0.4rem 1rem rgba(166, 107, 67, 0.1);
+  border-radius: 1.6rem;
 }
 
 .post__list:nth-of-type(even) {

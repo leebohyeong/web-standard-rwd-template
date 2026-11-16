@@ -1,6 +1,6 @@
 @media screen and (max-width: 1024px) {
   .hero {
-    height: 51rem;
+    height: 60rem;
   }
 
   .hero__subTitle,
@@ -262,7 +262,7 @@
 
   .taste__list {
     grid-template-rows: 10rem 20rem 10rem;
-    transition: grid-template-rows 0.1s ease;
+    transition: grid-template-rows 0.3s ease;
   }
 
   .taste__list.coffee {
@@ -275,6 +275,11 @@
 
   .taste__item.active .taste__content {
     gap: 2rem;
+  }
+
+  .taste__item::before,
+  .taste__label {
+    display: none;
   }
 
   .archive__list-wrap {
