@@ -196,6 +196,7 @@
   }
 
   .main__inner {
+    gap: 8rem;
     padding-bottom: 10rem;
   }
 

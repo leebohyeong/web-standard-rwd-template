@@ -266,7 +266,7 @@ h1,
 .main__inner {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 12rem;
   max-width: var(--size-max-width);
   margin: 0 auto;
   padding: 0 2rem 20rem;

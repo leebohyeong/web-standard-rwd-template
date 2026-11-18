@@ -52,10 +52,10 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link
       rel="stylesheet"
@@ -63,7 +63,9 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/media.css" />
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="./js/main.js"></script>
   </head>
   <body>
@@ -219,7 +221,7 @@
         <section id="post" class="post">
           <h2 class="section-title">카페 기록</h2>
           <div class="post__inner">
-            <article class="post__list">
+            <article class="post__list" data-aos="fade-up">
               <div class="post__thumb">
                 <img src="./images/post_img_1.jpg" alt="라온숨" />
                 <span class="post__date">11.01</span>
@@ -234,7 +236,7 @@
                 <a href="#">더 읽기</a>
               </div>
             </article>
-            <article class="post__list">
+            <article class="post__list" data-aos="fade-up">
               <div class="post__thumb">
                 <img src="./images/post_img_2.jpg" alt="브리끄" />
                 <span class="post__date">11.01</span>
@@ -249,7 +251,7 @@
                 <a href="#">더 읽기</a>
               </div>
             </article>
-            <article class="post__list">
+            <article class="post__list" data-aos="fade-up">
               <div class="post__thumb">
                 <img src="./images/post_img_3.jpg" alt="테이블스라운지" />
                 <span class="post__date">11.01</span>
@@ -270,17 +272,31 @@
           <h2 class="section-title">나의 카페 취향</h2>
           <div class="taste__inner">
             <div class="taste__tabs">
-              <button type="button" class="taste__tab" data-tab="coffee">
+              <button
+                type="button"
+                class="taste__tab"
+                data-tab="coffee"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 커피
               </button>
               <button
                 type="button"
                 class="taste__tab active"
                 data-tab="dessert"
+                data-aos="fade-up"
+                data-aos-delay="200"
               >
                 디저트
               </button>
-              <button type="button" class="taste__tab" data-tab="mood">
+              <button
+                type="button"
+                class="taste__tab"
+                data-tab="mood"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 분위기
               </button>
             </div>

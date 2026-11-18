@@ -85,4 +85,7 @@ const swiper = new Swiper('.hero-swiper', {
     }
 });
 
+AOS.init({
+    duration: 500,
+});
 
