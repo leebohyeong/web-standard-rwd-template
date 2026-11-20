@@ -2,7 +2,7 @@
 
 ## 프로젝트 정보
 
-- **배포 주소** : https://github.com/leebohyeong/web-standard-rwd-template.git
+- **배포 주소** : https://leebohyeong.github.io/web-standard-rwd-template/
 - **제작 기간** : 2026.11.09 ~ 2026.11.18
 - **제작 도구** : VSCode
 - **사용 기술** : HTML5, CSS3, JavaScript, Git
