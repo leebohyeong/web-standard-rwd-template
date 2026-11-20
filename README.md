@@ -24,44 +24,14 @@ git pull
 
 ## 핵심 코드
 ```bash
-//top 버튼 클릭 시 상단 이동
-topBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-    });
-});
-
-// 나의 카페 취향 menu 클릭 시 해당 컨텐츠 보여지게
-{
-    const taste = document.querySelector('.taste__inner');
-    const list = taste.querySelector(".taste__list");
-    const tabs = taste.querySelectorAll(".taste__tab");
-    const items = taste.querySelectorAll(".taste__item");
-
-    const tabEvent = (value) => {
-        tabs.forEach(tab => tab.classList.toggle('active', tab.dataset.tab === value));
-        items.forEach(item => item.classList.toggle('active', item.dataset.item === value));
-
-        list.classList.remove('coffee', 'dessert', 'mood');
-        list.classList.add(value);
-    }
-
-    taste.addEventListener('click', (event) => {
-        const tab = event.target.closest('[data-tab]');
-        const item = event.target.closest('[data-item]');
-
-        if(tab) tabEvent(tab.dataset.tab);
-        if(item) tabEvent(item.dataset.item);
-    });
-}
-
-//main hero 컨테츠 swiper silde 적용
+//main hero 컨텐츠 swiper silde 적용
+//autoplay , delay 5000 값을 줘서 5초마다 컨텐츠가 변경되도록 코딩
+//loop를 사용해서 반복되도록 코딩
+//effect: fade 효과를 줘서 기본 slide 형태가 아닌 fade 형태로 변경
+//navigation 좌,우 버튼을 커스텀해서 넣음
 const swiper = new Swiper('.hero-swiper', {
     autoplay: {
         delay: 5000,
-        disableOnInteraction: false
     },
     loop: true,
     effect: 'fade',
@@ -70,12 +40,5 @@ const swiper = new Swiper('.hero-swiper', {
         prevEl: '.hero-swiper-button-prev',
     }
 });
-
-//AOS 적용
-AOS.init({
-    duration: 500,
-});
-
-
 
 ```
